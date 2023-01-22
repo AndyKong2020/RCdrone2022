@@ -1,0 +1,9 @@
+<launch>
+    <include file="$(find usb_cam)/launch/usb_cam-test.launch" >
+
+    </include>
+
+    <include file="$(find yolov5_ros)/launch/yolov5.launch" >
+        <arg name="input_image_topic" value="/usb_cam/image_raw" />
+    </include>
+</launch>
